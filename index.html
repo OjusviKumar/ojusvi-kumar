@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ojusvi Kumar - Showcase Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Ojusvi Kumar</h1>
+    </div>
+    <nav class="sub-header">
+      <ul>
+        <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+        <li><a href="javascript:void(0)" onclick="openPDF('assets/Portfolio.pdf')">Architectural Portfolio</a></li>
+        <li><a href="javascript:void(0)" onclick="openPDF('assets/Resume.pdf')">Resume</a></li>
+        <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="objective-section" class="content-section">
+        <h2>OBJECTIVE</h2>
+      <div class="section-content">
+        <p>This is a placeholder objective paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod purus nec est laoreet, sed malesuada elit malesuada. Nulla vel quam sed velit interdum mollis ut sit amet lorem.</p>
+        <img src="objective.jpg" alt="Objective Image">
+      </div>
+    </section>
+
+    <section id="philosophy-section" class="content-section">
+      <h2>PHILOSOPHY</h2>
+      <div class="section-content">
+        <p>This is a placeholder philosophy paragraph. Curabitur vulputate, dui in ullamcorper sodales, est tortor efficitur neque, eget varius arcu turpis sit amet lectus. Sed et suscipit ligula. Proin elementum, odio sit amet maximus euismod.</p>
+        <img src="philosophy.jpg" alt="Philosophy Image">
+      </div>
+    </section>
+
+    <section id="services-section" class="content-section">
+      <h2>SERVICES</h2>
+      <ul class="services-bullets">
+        <li>ARCHITECTURE</li>
+        <li>INTERIOR DESIGNS</li>
+        <li>LANDSCAPING</li>
+        <li>FURNITURE DESIGNS</li>
+        <li>URBAN PLANNING</li>
+        <li>3D VISUALIZATIONS</li>
+        <li>WALKTHROUGHS</li>
+        <li>DOCUMENTATION, SITE MAPPING AND PLANNING</li>
+      </ul>
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <!-- Slides will be dynamically generated here -->
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </section>
+
+    <section id="contact-section" class="content-section" style="display: none;">
+      <div class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Let's Connect!</p>
+        <ul class="contact-info">
+          <li>Email: <a href="mailto:ojusvi.kumar@example.com">ojusvi.kumar@example.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/ojusvi-kumar" target="_blank">My LinkedIn Profile</a></li>
+        </ul>
+        <div class="card-container">
+          <img src="business-card.jpg" alt="Business Card" class="business-card">
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Ojusvi Kumar. All rights reserved.</p>
+    <p id="dateTime"></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

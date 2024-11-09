@@ -1,0 +1,298 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.header-container {
+  padding: 10px;
+  background-color: black !important;
+}
+
+.header-container h1 {
+  text-align: center;
+  font-size: 26px;
+  color: #f0c040;
+  text-transform: uppercase;
+}
+
+.sub-header {
+  background-color: black !important;
+  text-align: center;
+}
+
+.sub-header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.sub-header li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f0c040;
+  text-transform: uppercase;
+  padding: 8px;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+.sub-header li a:hover {
+  color: #fff;
+  font-size: 19px;
+}
+
+.content-section {
+  padding: 10px 20px;
+}
+
+.content-section h2 {
+  color: #f0c040;
+}
+
+#objective-section {
+  background-color: white;
+  color: black;
+}
+
+#philosophy-section {
+  background-color: black;
+  color: white;
+}
+
+#services-section {
+  background-color: white;
+  color: black;
+}
+
+#services-section ul li {
+  color: black;
+}
+
+#contact-section {
+  background: black;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Helvetica', sans-serif;
+  color: #f0a500;
+}
+
+#contact-section p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in;
+  margin-top: 75px !important;
+}
+
+.contact-info li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #f0a500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffd700;
+}
+
+.card-container {
+  margin-top: 20px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.business-card {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover .business-card {
+  transform: translateY(-5px);
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.section-content p {
+  flex: 1;
+  text-align: justify;
+  margin-right: 20px;
+}
+
+.section-content img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.services-bullets {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.services-bullets li {
+  margin-left: 18px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #444;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: black;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #f0c040;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Adjust this value as needed */
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.slide img {
+  width: auto;
+  height: 100%; /* Make the image take full container height */
+  object-fit: cover; /* This will maintain aspect ratio and crop if necessary */
+  display: block;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.fade {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a.prev, a.next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f0c040;
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+a.prev:hover, a.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+a.prev {
+  left: 0;
+}
+
+a.next {
+  right: 0;
+}
+
+/* Business Card styling */
+.business-card {
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
