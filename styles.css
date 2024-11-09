@@ -130,6 +130,25 @@ header {
     width: 100% !important;
     margin-bottom: 0 !important;
   }
+
+  #master-slider-container a.prev,
+  #master-slider-container a.next {
+    top: 60% !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+
+  #philosophy-slider-container a.prev,
+  #philosophy-slider-container a.next {
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+
+  #services-slider-container a.prev,
+  #services-slider-container a.next {
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
 }
 
 #objective-section {
@@ -317,8 +336,10 @@ footer {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* This ensures the image will scale without being cropped */
-  object-position: center; /* Keep the image centered */
+  object-fit: contain;
+  /* This ensures the image will scale without being cropped */
+  object-position: center;
+  /* Keep the image centered */
   display: block;
 }
 
