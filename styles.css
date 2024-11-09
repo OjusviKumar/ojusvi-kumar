@@ -98,6 +98,11 @@ header {
   flex-shrink: 0;
 }
 
+#master-slider-container img {
+  max-width: 100% !important;
+  margin-top: 30px;
+}
+
 @media (max-width: 768px) {
   .philosophy-item {
     flex-direction: column;
