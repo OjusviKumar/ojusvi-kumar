@@ -1,7 +1,4 @@
 const mediaFiles = [
-  { type: 'image', src: 'assets/services/ELEVATION A.jpg', alt: 'Elevation A' },
-  { type: 'image', src: 'assets/services/ELEVATION B.jpg', alt: 'Elevation B' },
-  { type: 'image', src: 'assets/services/forumadvaita_11 - Photo.jpg', alt: 'Forum Advaita' },
   { type: 'image', src: 'assets/services/G_1 - Photo.jpg', alt: 'G 1' },
   { type: 'image', src: 'assets/services/G_2 - Photo.jpg', alt: 'G 2' },
   { type: 'image', src: 'assets/services/G_3 - Photo.jpg', alt: 'G 3' },
@@ -12,10 +9,8 @@ const mediaFiles = [
   { type: 'image', src: 'assets/services/G_17 - Photo.jpg', alt: 'G 17' },
   { type: 'image', src: 'assets/services/G_21 - Photo.jpg', alt: 'G 21' },
   { type: 'image', src: 'assets/services/G_22 - Photo.jpg', alt: 'G 22' },
-  { type: 'image', src: 'assets/services/H_2 - Photo.jpg', alt: 'H 2' },
-  { type: 'image', src: 'assets/services/H_2 - Photo (2).jpg', alt: 'H 2 (2)' },
-  { type: 'image', src: 'assets/services/H_2 - Photo (3).jpg', alt: 'H 2 (3)' },
-  { type: 'image', src: 'assets/services/H_2 - Photo (5).jpg', alt: 'H 2 (5)' },
+  { type: 'image', src: 'assets/services/O.jpg', alt: 'O' },
+  { type: 'image', src: 'assets/services/SAMPLE.jpg', alt: 'Sample' },
   { type: 'image', src: 'assets/services/IMG20231103173000.jpg', alt: 'IMG 20231103173000' },
   { type: 'image', src: 'assets/services/IMG20231103173012.jpg', alt: 'IMG 20231103173012' },
   { type: 'image', src: 'assets/services/IMG20231103173118.jpg', alt: 'IMG 20231103173118' },
@@ -23,9 +18,13 @@ const mediaFiles = [
   { type: 'image', src: 'assets/services/IMG20231103173157.jpg', alt: 'IMG 20231103173157' },
   { type: 'image', src: 'assets/services/IMG20231103173202.jpg', alt: 'IMG 20231103173202' },
   { type: 'image', src: 'assets/services/IMG20231103173207.jpg', alt: 'IMG 20231103173207' },
-  { type: 'image', src: 'assets/services/main.jpg', alt: 'Main' },
-  { type: 'image', src: 'assets/services/O.jpg', alt: 'O' },
-  { type: 'image', src: 'assets/services/postedit.jpg', alt: 'Post Edit' },
+  { type: 'image', src: 'assets/services/OP02_6 - Photo.jpg', alt: 'OP02_6 - Photo' },
+  { type: 'image', src: 'assets/services/OP02_7 - Photo.jpg', alt: 'OP02_7 - Photo' },
+  { type: 'image', src: 'assets/services/OP02_8 - Photo.jpg', alt: 'OP02_8 - Photo' },
+  { type: 'image', src: 'assets/services/OP02_9 - Photo.jpg', alt: 'OP02_9 - Photo' },
+  { type: 'image', src: 'assets/services/OP02_10 - Photo.jpg', alt: 'OP02_10 - Photo' },
+  { type: 'image', src: 'assets/services/ELEVATION A.jpg', alt: 'Elevation A' },
+  { type: 'image', src: 'assets/services/ELEVATION B.jpg', alt: 'Elevation B' },
   { type: 'image', src: 'assets/services/RS_6 - Photo.jpg', alt: 'RS 6' },
   { type: 'image', src: 'assets/services/RS_13 - Photo.jpg', alt: 'RS 13' },
   { type: 'image', src: 'assets/services/RS_16 - Photo.jpg', alt: 'RS 16' },
@@ -34,7 +33,13 @@ const mediaFiles = [
   { type: 'image', src: 'assets/services/RS_37 - Photo.jpg', alt: 'RS 37' },
   { type: 'image', src: 'assets/services/RS_38 - Photo.jpg', alt: 'RS 38' },
   { type: 'image', src: 'assets/services/RS_40 - Photo.jpg', alt: 'RS 40' },
-  { type: 'image', src: 'assets/services/SAMPLE.jpg', alt: 'Sample' }
+  { type: 'image', src: 'assets/services/H_2 - Photo (2).jpg', alt: 'H 2 (2)' },
+  { type: 'image', src: 'assets/services/H_2 - Photo (3).jpg', alt: 'H 2 (3)' },
+  { type: 'image', src: 'assets/services/H_2 - Photo (5).jpg', alt: 'H 2 (5)' },
+  { type: 'image', src: 'assets/services/H_2 - Photo.jpg', alt: 'H 2' },
+  { type: 'image', src: 'assets/services/forumadvaita_11 - Photo.jpg', alt: 'Forum Advaita' },
+  { type: 'image', src: 'assets/services/main.jpg', alt: 'Main' },
+  { type: 'image', src: 'assets/services/postedit.jpg', alt: 'Post Edit' }
 ];
 
 // Date and Time
