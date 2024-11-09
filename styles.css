@@ -117,7 +117,7 @@ header {
   .philosophy-item img,
   .slider-container {
     max-width: 100%;
-    margin-bottom: 10px;
+    margin: 15px 0;
   }
 
   .text-content p,
@@ -127,7 +127,7 @@ header {
   }
 
   #philosophy-slider-container {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 0 !important;
   }
 }
