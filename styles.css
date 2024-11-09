@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +69,43 @@ header {
 
 .content-section h2 {
   color: #f0c040;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.philosophy-item .text-content {
+  flex: 1;
+  text-align: justify;
+  margin-right: 20px;
+}
+
+.philosophy-item img {
+  max-width: 45%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .philosophy-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .philosophy-item .text-content {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .philosophy-item img,
+  .slider-container {
+    max-width: 100%;
+  }
 }
 
 #objective-section {
@@ -216,17 +252,24 @@ footer {
 
 .slider-container {
   position: relative;
-  width: 100%;
-  height: 100%; /* Adjust this value as needed */
+  height: 100%;
   margin: auto;
   overflow: hidden;
   margin-bottom: 60px;
 }
 
+#philosophy-slider-container {
+  width: 45%;
+}
+
+#services-slider-container {
+  width: 100%;
+}
+
 .slide img {
   width: auto;
-  height: 100%; /* Make the image take full container height */
-  object-fit: cover; /* This will maintain aspect ratio and crop if necessary */
+  height: 100%;
+  object-fit: cover;
   display: block;
   margin: auto;
 }
@@ -234,7 +277,7 @@ footer {
 .slider img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensures the entire image is visible without cropping */
+  object-fit: contain;
 }
 
 .slider {
@@ -242,33 +285,26 @@ footer {
   transition: transform 0.5s ease;
 }
 
-.slide {
+#philosophy-slider .slide {
   display: none;
   width: 100%;
 }
 
-.fade {
+#philosophy-slider .fade {
   animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.video-slide {
+#philosophy-slider .video-slide {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-a.prev, a.next {
+#philosophy-slider-container a.prev,
+#philosophy-slider-container a.next {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #f0c040;
   font-size: 30px;
@@ -277,19 +313,70 @@ a.prev, a.next {
   transition: background-color 0.3s;
 }
 
-a.prev:hover, a.next:hover {
+#philosophy-slider-container a.prev:hover,
+#philosophy-slider-container a.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-a.prev {
+#philosophy-slider-container a.prev {
   left: 0;
 }
 
-a.next {
+#philosophy-slider-container a.next {
   right: 0;
 }
 
-/* Business Card styling */
+#services-slider .slide {
+  display: none;
+  width: 100%;
+}
+
+#services-slider .fade {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#services-slider .video-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#services-slider-container a.prev,
+#services-slider-container a.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f0c040;
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#services-slider-container a.prev:hover,
+#services-slider-container a.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#services-slider-container a.prev {
+  left: 0;
+}
+
+#services-slider-container a.next {
+  right: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .business-card {
   width: 200px;
   border-radius: 8px;

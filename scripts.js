@@ -1,4 +1,4 @@
-const mediaFiles = [
+const servicesMediaFiles = [
   { type: 'image', src: 'assets/services/G_1 - Photo.jpg', alt: 'G 1' },
   { type: 'image', src: 'assets/services/G_2 - Photo.jpg', alt: 'G 2' },
   { type: 'image', src: 'assets/services/G_3 - Photo.jpg', alt: 'G 3' },
@@ -42,17 +42,22 @@ const mediaFiles = [
   { type: 'image', src: 'assets/services/postedit.jpg', alt: 'Post Edit' }
 ];
 
+const philosophyMediaFiles = [
+  { type: 'image', src: 'assets/philosophy/stories.jpg', alt: 'stories' },
+  { type: 'image', src: 'assets/philosophy/stories 2.jpg', alt: 'stories 2' }
+];
+
 // Date and Time
 function updateDateTime() {
   const dateTimeElement = document.getElementById('dateTime');
   const now = new Date();
-  
+
   const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
   const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-  
+
   const formattedDate = now.toLocaleDateString(undefined, dateOptions);
   let formattedTime = now.toLocaleTimeString(undefined, timeOptions);
-  
+
   formattedTime = formattedTime.replace('am', 'AM').replace('pm', 'PM');
 
   dateTimeElement.innerHTML = `${formattedDate} ${formattedTime}`;
@@ -60,13 +65,11 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 100);
 
-function createSlider() {
-  const slider = document.getElementById('slider');
-  
-  mediaFiles.forEach((media, index) => {
+function initializeSlider(mediaFiles, sliderContainer) {
+  mediaFiles.forEach((media) => {
     const slide = document.createElement('div');
-    slide.classList.add('slide', 'fade');
-    
+    slide.classList.add('slide', 'fade'); // Ensuring each slide has necessary classes
+
     if (media.type === 'video') {
       const video = document.createElement('video');
       video.classList.add('video-slide');
@@ -82,42 +85,72 @@ function createSlider() {
       img.alt = media.alt;
       slide.appendChild(img);
     }
-    
-    slider.appendChild(slide);
+
+    sliderContainer.appendChild(slide);
   });
 }
 
-createSlider();
+initializeSlider(philosophyMediaFiles, document.getElementById('philosophy-slider'));
+initializeSlider(servicesMediaFiles, document.getElementById('services-slider'));
 
-let slideIndex = 0;
+let slideIndexPhilosophy = 0;
+let slideIndexServices = 0;
 
-// Slider functionality
-function changeSlide(n) {
-  const slides = document.getElementsByClassName('slide');
-  if (n > 0) {
-    slideIndex++;
-  } else {
-    slideIndex--;
+function changeSlide(n, sliderId) {
+  let slides, slideIndex;
+
+  if (sliderId === 'philosophy') {
+    slides = document.querySelectorAll('#philosophy-slider .slide');
+    slideIndexPhilosophy += n;
+    slideIndex = slideIndexPhilosophy;
+  } else if (sliderId === 'services') {
+    slides = document.querySelectorAll('#services-slider .slide');
+    slideIndexServices += n;
+    slideIndex = slideIndexServices;
   }
+
   if (slideIndex >= slides.length) {
     slideIndex = 0;
   }
   if (slideIndex < 0) {
     slideIndex = slides.length - 1;
   }
-  
-  // Hide all slides
+
+  // Update the specific slide index
+  if (sliderId === 'philosophy') {
+    slideIndexPhilosophy = slideIndex;
+  } else if (sliderId === 'services') {
+    slideIndexServices = slideIndex;
+  }
+
+  // Hide all slides in the selected slider
   for (let slide of slides) {
     slide.style.display = 'none';
   }
-  
-  // Show the current slide
+
+  // Show the current slide in the selected slider
   slides[slideIndex].style.display = 'block';
 }
 
+function autoSlide(sliderId) {
+  if (sliderId === 'philosophy') {
+    changeSlide(1, 'philosophy');
+  } else if (sliderId === 'services') {
+    changeSlide(1, 'services');
+  }
+}
+
+// Auto slide every 10 seconds for each slider
 setInterval(() => {
-  changeSlide(1);  
+  autoSlide('philosophy');
 }, 10000);
+
+setInterval(() => {
+  autoSlide('services');
+}, 10000);
+
+changeSlide(0, 'philosophy');
+changeSlide(0, 'services');
 
 function showSection(sectionId) {
   const objectiveSection = document.getElementById('objective-section');
@@ -129,13 +162,13 @@ function showSection(sectionId) {
   sections.push(objectiveSection, philosophySection, servicesSection, contactSection);
 
   sections.forEach(section => {
-    if(sectionId === 'home'){
-      if(section.id != 'contact-section')
+    if (sectionId === 'home') {
+      if (section.id != 'contact-section')
         section.style.display = 'block';
       else
         section.style.display = 'none';
-    }else{
-      if(section.id == 'contact-section')
+    } else {
+      if (section.id == 'contact-section')
         section.style.display = 'block';
       else
         section.style.display = 'none';
@@ -147,15 +180,3 @@ function showSection(sectionId) {
 function openPDF(pdfPath) {
   window.open(pdfPath, '_blank');
 }
-
-function showSlides(n) {
-  const slides = document.getElementsByClassName("slide");
-  if (n >= slides.length) slideIndex = 0;
-  if (n < 0) slideIndex = slides.length - 1;
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex].style.display = "block";
-}
-
-showSlides(slideIndex);
