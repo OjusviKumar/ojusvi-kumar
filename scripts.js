@@ -166,7 +166,7 @@ function showSection(sectionId) {
 
   sections.forEach(section => {
     if (sectionId === 'home') {
-      if (section.id != 'contact-section' || section.id != 'master-section')
+      if (['objective-section', 'philosophy-section', 'services-section'].includes(section.id))
         section.style.display = 'block';
       else
         section.style.display = 'none';
