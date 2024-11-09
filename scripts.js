@@ -54,24 +54,6 @@ const masterMediaFiles = [
   { type: 'image', src: 'assets/with-the-master/4.jpg', alt: '4' }
 ];
 
-// Date and Time
-function updateDateTime() {
-  const dateTimeElement = document.getElementById('dateTime');
-  const now = new Date();
-
-  const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
-  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-
-  const formattedDate = now.toLocaleDateString(undefined, dateOptions);
-  let formattedTime = now.toLocaleTimeString(undefined, timeOptions);
-
-  formattedTime = formattedTime.replace('am', 'AM').replace('pm', 'PM');
-
-  dateTimeElement.innerHTML = `${formattedDate} ${formattedTime}`;
-}
-
-setInterval(updateDateTime, 100);
-
 function initializeSlider(mediaFiles, sliderContainer) {
   mediaFiles.forEach((media) => {
     const slide = document.createElement('div');
