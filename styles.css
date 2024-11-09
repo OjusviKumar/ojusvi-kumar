@@ -115,6 +115,12 @@ header {
   .slider-container {
     max-width: 100%;
   }
+
+  .text-content p,
+  .text-content h4 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
 }
 
 #objective-section {
