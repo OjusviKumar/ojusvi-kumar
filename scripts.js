@@ -47,6 +47,13 @@ const philosophyMediaFiles = [
   { type: 'image', src: 'assets/philosophy/stories 2.jpg', alt: 'stories 2' }
 ];
 
+const masterMediaFiles = [
+  { type: 'image', src: 'assets/with-the-master/1.jpg', alt: '1' },
+  { type: 'image', src: 'assets/with-the-master/2.jpg', alt: '2' },
+  { type: 'image', src: 'assets/with-the-master/3.jpg', alt: '3' },
+  { type: 'image', src: 'assets/with-the-master/4.jpg', alt: '4' }
+];
+
 // Date and Time
 function updateDateTime() {
   const dateTimeElement = document.getElementById('dateTime');
@@ -95,6 +102,7 @@ initializeSlider(servicesMediaFiles, document.getElementById('services-slider'))
 
 let slideIndexPhilosophy = 0;
 let slideIndexServices = 0;
+let slideIndexMaster = 0;
 
 function changeSlide(n, sliderId) {
   let slides, slideIndex;
@@ -107,6 +115,10 @@ function changeSlide(n, sliderId) {
     slides = document.querySelectorAll('#services-slider .slide');
     slideIndexServices += n;
     slideIndex = slideIndexServices;
+  } else if (sliderId === 'master') {
+    slides = document.querySelectorAll('#master-slider .slide');
+    slideIndexMaster += n;
+    slideIndex = slideIndexMaster;
   }
 
   if (slideIndex >= slides.length) {
@@ -121,6 +133,8 @@ function changeSlide(n, sliderId) {
     slideIndexPhilosophy = slideIndex;
   } else if (sliderId === 'services') {
     slideIndexServices = slideIndex;
+  } else if (sliderId === 'master') {
+    slideIndexMaster = slideIndex;
   }
 
   // Hide all slides in the selected slider
@@ -157,19 +171,33 @@ function showSection(sectionId) {
   const philosophySection = document.getElementById('philosophy-section');
   const servicesSection = document.getElementById('services-section');
   const contactSection = document.getElementById('contact-section');
+  const masterSection = document.getElementById('master-section');
 
   let sections = [];
-  sections.push(objectiveSection, philosophySection, servicesSection, contactSection);
+  sections.push(objectiveSection, philosophySection, servicesSection, contactSection, masterSection);
 
   sections.forEach(section => {
     if (sectionId === 'home') {
-      if (section.id != 'contact-section')
+      if (section.id != 'contact-section' || section.id != 'master-section')
         section.style.display = 'block';
       else
         section.style.display = 'none';
-    } else {
+    } else if (sectionId === 'contact'){
       if (section.id == 'contact-section')
         section.style.display = 'block';
+      else
+        section.style.display = 'none';
+    } else{
+      if (section.id == 'master-section'){
+        section.style.display = 'block';
+        initializeSlider(masterMediaFiles, document.getElementById('master-slider'));
+
+        setInterval(() => {
+          autoSlide('master');
+        }, 10000);
+
+        changeSlide(0, 'master');
+      }
       else
         section.style.display = 'none';
     }
