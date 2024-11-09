@@ -102,11 +102,11 @@ header {
   .philosophy-item {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 100px;
   }
 
   .philosophy-item .text-content {
     margin-right: 0;
-    margin-bottom: 10px;
   }
 
   .philosophy-item img,
@@ -119,6 +119,11 @@ header {
   .text-content h4 {
     margin-right: 0 !important;
     margin-left: 0 !important;
+  }
+
+  #philosophy-slider-container {
+    width: 100%;
+    margin-bottom: 0 !important;
   }
 }
 

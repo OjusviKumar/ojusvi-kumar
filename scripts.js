@@ -81,6 +81,7 @@ function initializeSlider(mediaFiles, sliderContainer) {
 
 initializeSlider(philosophyMediaFiles, document.getElementById('philosophy-slider'));
 initializeSlider(servicesMediaFiles, document.getElementById('services-slider'));
+initializeSlider(masterMediaFiles, document.getElementById('master-slider'));
 
 let slideIndexPhilosophy = 0;
 let slideIndexServices = 0;
@@ -145,8 +146,13 @@ setInterval(() => {
   autoSlide('services');
 }, 10000);
 
+setInterval(() => {
+  autoSlide('master');
+}, 10000);
+
 changeSlide(0, 'philosophy');
 changeSlide(0, 'services');
+changeSlide(0, 'master');
 
 function showSection(sectionId) {
   const objectiveSection = document.getElementById('objective-section');
@@ -172,13 +178,6 @@ function showSection(sectionId) {
     } else{
       if (section.id == 'master-section'){
         section.style.display = 'block';
-        initializeSlider(masterMediaFiles, document.getElementById('master-slider'));
-
-        setInterval(() => {
-          autoSlide('master');
-        }, 10000);
-
-        changeSlide(0, 'master');
       }
       else
         section.style.display = 'none';
