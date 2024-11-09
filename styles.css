@@ -7,7 +7,7 @@
 
 body {
   background: black;
-  color: white;
+  color: #F9F6EE;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ header {
 .header-container h1 {
   text-align: center;
   font-size: 26px;
-  color: #f0c040;
+  color: #eaa221;
   text-transform: uppercase;
 }
 
@@ -52,7 +52,7 @@ header {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-  color: #f0c040;
+  color: #eaa221;
   text-transform: uppercase;
   padding: 8px;
   transition: color 0.3s, font-size 0.3s;
@@ -68,7 +68,16 @@ header {
 }
 
 .content-section h2 {
-  color: #f0c040;
+  color: #eaa221;
+}
+
+.text-content p {
+  margin-right: 230px;
+  margin-left: 85px;
+}
+
+.text-content h4 {
+  margin-left: 60px;
 }
 
 .philosophy-item {
@@ -86,7 +95,7 @@ header {
 }
 
 .philosophy-item img {
-  max-width: 45%;
+  max-width: 35%;
   height: auto;
   flex-shrink: 0;
 }
@@ -109,17 +118,17 @@ header {
 }
 
 #objective-section {
-  background-color: white;
+  background-color: #F9F6EE;
   color: black;
 }
 
 #philosophy-section {
   background-color: black;
-  color: white;
+  color: #F9F6EE;
 }
 
 #services-section {
-  background-color: white;
+  background-color: #F9F6EE;
   color: black;
 }
 
@@ -130,7 +139,7 @@ header {
 #contact-section {
   background: black;
   padding: 40px 20px;
-  color: white;
+  color: #F9F6EE;
   text-align: center;
   font-family: 'Arial', sans-serif;
   position: relative;
@@ -213,7 +222,8 @@ header {
 .section-content p {
   flex: 1;
   text-align: justify;
-  margin-right: 20px;
+  margin-right: 230px;
+  margin-left: 85px;
 }
 
 .section-content img {
@@ -244,7 +254,7 @@ footer {
   padding: 5px;
   text-align: center;
   font-size: 14px;
-  color: #f0c040;
+  color: #eaa221;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -259,7 +269,7 @@ footer {
 }
 
 #philosophy-slider-container {
-  width: 45%;
+  width: 35%;
 }
 
 #services-slider-container {
@@ -306,7 +316,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: #f0c040;
+  color: #eaa221;
   font-size: 30px;
   padding: 16px;
   cursor: pointer;
@@ -347,7 +357,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: #f0c040;
+  color: #eaa221;
   font-size: 30px;
   padding: 16px;
   cursor: pointer;
