@@ -191,9 +191,9 @@ header {
 }
 
 .card-flip {
-  margin-left: -155px;
-  width: 200%;
-  height: 200%;
+  margin-left: -110px;
+  width: 170%;
+  height: 170%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s ease-in-out;
