@@ -230,25 +230,10 @@ header {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 600px) {
-  #contact-section {
-    padding: 10px;
-    height: auto; /* Ensures no cropping on smaller screens */
-  }
-
+@media (max-width: 400px) {
   .card-flip-container {
-    width: 90%; /* Adjusts width to fit smaller screens */
-    height: auto; /* Proportional height */
-  }
-
-  .card-flip {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-front img,
-  .card-back img {
-    object-fit: contain; /* Ensures full visibility */
+    width: 100% !important; /* Adjusts width to fit smaller screens */
+    height: 100% !important; /* Proportional height */
   }
 }
 
