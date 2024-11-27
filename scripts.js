@@ -172,7 +172,7 @@ function showSection(sectionId) {
         section.style.display = 'none';
     } else if (sectionId === 'contact'){
       if (section.id == 'contact-section')
-        section.style.display = 'block';
+        section.style.display = 'flex';
       else
         section.style.display = 'none';
     } else{
